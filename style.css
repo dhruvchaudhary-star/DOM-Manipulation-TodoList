@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f4f4f9;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.container:hover{
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    background:;
+}
+
+h1{
+    text-align: center;
+}
+
+#todoInput {
+width: 75%;
+padding: 10px;
+margin-right: 10px ;
+border: 2 px solid #ccc;
+border-radius: 5px;
+
+}
+#addTodo     {
+    padding: 10px 20px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    box-shadow: 0 4px #fff;
+}
+
+#addTodo:active {
+    transform: translateY(1px);
+    box-shadow: 0  #fff;
+}

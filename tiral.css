@@ -1,0 +1,23 @@
+.press-btn {
+  padding: 15px 32px;
+  font-size: 16px;
+  background-color: #008CBA; /* Blue */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.1s ease; /* Smooth transition for the effect */
+  box-shadow: 0 4px #005f7a; /* A shadow to give it depth */
+}
+
+.press-btn:hover {
+  background-color: #005f7a;
+}
+
+/* Styles applied when the button is actively pressed down */
+.press-btn:active {
+  transform: translateY(4px); /* Moves the button down 4px */
+  box-shadow: 0 0 #005f7a; /* Removes the shadow to complete the pressed look */
+  background-color: #00334d;
+}
