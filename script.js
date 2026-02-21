@@ -14,11 +14,19 @@ function addToDoToLocalStorage(todoText) {
 
 }
 
+function AppendToDoInHtml(todoText) {
+  const toDoList = document.getElementById("toDoList");
+  const li = document.createElement("li");
+  li.textContent = todoText;
+  toDoList.appendChild(li);
+}
+
 document.addEventListener("DOMContentLoaded" , () => {
   const todoInput = document.getElementById("todoInput");
   
 
   const submitButton = document.getElementById("addTodo");
+  const toDoList = document.getElementById("toDoList");
 
   submitButton.addEventListener("click" , (event) => {
     const todoText = todoInput.value
@@ -26,6 +34,8 @@ document.addEventListener("DOMContentLoaded" , () => {
       alert('please write something');
     } else {
       addToDoToLocalStorage(todoText);
+      AppendToDoInHtml(todoText);
+      todoInput.value = '';
     }
 
 
@@ -41,6 +51,21 @@ document.addEventListener("DOMContentLoaded" , () => {
     console.log(event.target.value );
   })
 
-    loadToDo();
+    const todos =  loadToDos();
+
+
+    todos.toDoList.forEach(todo => {
+      const   newTodoItem = document.createElement("li");
+      newTodoItem.textContent = todo;
+      toDoList.appendChild(newTodoItem);
+
+
+      
+    })
+
+
+
+
+
 })
 
